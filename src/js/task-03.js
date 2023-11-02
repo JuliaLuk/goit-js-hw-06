@@ -15,17 +15,10 @@ const images = [
 
 const galleryEl = document.querySelector(".gallery");
 
-const galleryItem = document.createElement("li");
-galleryItem.classList.add("gal-item");
-const galleryImg = document.createElement("img");
-galleryImg.classList.add("gal-img");
-galleryImg.src = images.url;
-galleryImg.alt = images.alt;
-
-galleryEl.insertAdjacentElement("beforeend", galleryItem);
-
-galleryItem.insertAdjacentElement("beforeend", galleryImg);
-
-console.log(galleryEl);
-// console.log(galleryItem);
-// console.log(galleryImg);
+const galleryMarkup = images
+  .map(
+    ({ url, alt }) =>
+      `<li class="gallery-item"><img src="${url}" alt="${alt}" width = "300" height = "auto"></li>`
+  )
+  .join("");
+galleryEl.insertAdjacentHTML("beforeend", galleryMarkup);
