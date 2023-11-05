@@ -1,14 +1,22 @@
-let counterValue = document.querySelector("#value");
-counterValue = 0;
+const number = document.querySelector("#value");
+let counterValue = 0;
 
-const decrementBtn = document.querySelector("dataset.action.decrement");
+const decrementBtn = document.querySelector('button[data-action="increment"]');
 
-const incrementBtn = document.querySelector("dataset.action.increment");
+const incrementBtn = document.querySelector('button[data-action="decrement"]');
 
-decrementBtn.addEventListener("click", (counterValue = counterValue + 1));
+decrementBtn.addEventListener("click", function () {
+  counterValue += 1;
+  number.textContent = counterValue;
+  console.log("klick on plus");
+});
 
-incrementBtn.addEventListener("click", counterValue - 1);
+incrementBtn.addEventListener("click", function () {
+  counterValue -= 1;
+  number.textContent = counterValue;
+  console.log("klick on minus");
+});
 
-console.log(counterValue);
+console.log(number);
 console.log(decrementBtn);
 console.log(incrementBtn);
