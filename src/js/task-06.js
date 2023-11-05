@@ -1,0 +1,19 @@
+const userInput = document.querySelector("#validation-input");
+// console.log(userInput);
+
+const dataLength = userInput.getAttribute("data-length");
+// console.log(dataLength);
+
+userInput.addEventListener("blur", handelBlur);
+function handelBlur(event) {
+  const userName = event.currentTarget.value;
+  if (userInput.value.length === Number(dataLength)) {
+    userInput.classList.add("valid");
+    // alert(`Hello ${userName}`);
+  } else {
+    userInput.classList.add("invalid");
+    // alert(`Ups ${userName}`);
+  }
+
+  //   console.log(userName);
+}
