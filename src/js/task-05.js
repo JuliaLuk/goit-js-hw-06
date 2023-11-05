@@ -5,7 +5,7 @@ const helloText = document.querySelector("#name-output");
 // console.log(helloText);
 
 userName.addEventListener("input", (event) => {
-  let input = event.currentTarget.value.trim();
+  let input = event.currentTarget.value;
   if (input === "") {
     helloText.textContent = "Anonymous";
   } else {
