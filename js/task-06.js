@@ -7,11 +7,13 @@ const dataLength = userInput.getAttribute("data-length");
 userInput.addEventListener("blur", handelBlur);
 function handelBlur(event) {
   const userName = event.currentTarget.value;
-  if (userInput.value.length === Number(dataLength)) {
+  if (userInput.value.length >= Number(dataLength)) {
     userInput.classList.add("valid");
+    userInput.classList.remove("invalid");
     // alert(`Hello ${userName}`);
   } else {
     userInput.classList.add("invalid");
+    // userInput.classList.add("valid");
     // alert(`Ups ${userName}`);
   }
 
