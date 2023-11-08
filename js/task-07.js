@@ -1,5 +1,5 @@
-const slider = document.querySelector("#font-size-control");
-// console.log(slider);
+const slider = document.querySelector("#font-size-control", "range");
+console.log(slider);
 
 const sliderText = document.querySelector("#text");
 // console.log(sliderText);
