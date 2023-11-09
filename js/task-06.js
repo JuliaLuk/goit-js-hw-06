@@ -13,7 +13,7 @@ function handelBlur(event) {
     // alert(`Hello ${userName}`);
   } else {
     userInput.classList.add("invalid");
-    // userInput.classList.add("valid");
+    userInput.classList.remove("valid");
     // alert(`Ups ${userName}`);
   }
 
